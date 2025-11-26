@@ -41,58 +41,166 @@ Image<float> get_srm_kernel(int size) {
     return get_srm_3x3();
 }
 
+// Función que combina los bloques procesados en una imagen completa
+Image<unsigned char> combine_blocks_to_image(const std::vector<Block<float>>& blocks, int width, int height) {
+    Image<unsigned char> result(width, height, 1);  // Crear una nueva imagen para el resultado
 
-Image<unsigned char> compute_srm(const Image<unsigned char> &image, int kernel_size) {
+    // Recorrer los bloques y colocarlos en la imagen final
+    for (const auto& block : blocks) {
+        for (int row = 0; row < block.size; ++row) {
+            for (int col = 0; col < block.size; ++col) {
+                // Copiar el valor del bloque a la imagen
+                result.set(block.j + row, block.i + col, 0, static_cast<unsigned char>(block.get_pixel(row, col, 0)));
+            }
+        }
+    }
+
+    return result;
+}
+// Función compute_srm con corrección en la llamada a MPI_Gather
+Image<unsigned char> compute_srm(const Image<unsigned char>& image, int kernel_size, int rank, int num_procs) {
     auto begin = std::chrono::steady_clock::now();
-    std::cout<<"Computing SRM "<<kernel_size<<"x"<<kernel_size<<"..."<<std::endl;          
+    std::cout << "Computing SRM " << kernel_size << "x" << kernel_size << " on process " << rank << "..." << std::endl;
+
+    // Convertir a escala de grises y a flotante
     Image<float> srm = image.to_grayscale().convert<float>();
-    srm = srm.convolution(get_srm_kernel(kernel_size));
-    srm = srm.abs().normalized();
-    srm = srm * 255;
-    Image<unsigned char> result = srm.convert<unsigned char>();
-    
+    Image<float> kernel = get_srm_kernel(kernel_size);  // Obtener el kernel SRM
+
+    // Dividir la imagen en bloques y asignar bloques a cada proceso
+    std::vector<Block<float>> blocks = srm.get_blocks(8);  // Usar bloques de 8x8
+    int num_blocks = blocks.size();
+    int blocks_per_proc = num_blocks / num_procs;
+    int start_block = rank * blocks_per_proc;
+    int end_block = (rank == num_procs - 1) ? num_blocks : (rank + 1) * blocks_per_proc;
+
+    // Procesar los bloques asignados
+    for (int i = start_block; i < end_block; ++i) {
+        Block<float>& block = blocks[i];
+
+        // Extraer el bloque como una subimagen de la imagen original
+        int block_x = block.i;  // Coordenada x de la esquina superior izquierda del bloque
+        int block_y = block.j;  // Coordenada y de la esquina superior izquierda del bloque
+        Image<float> block_image(8, 8, 1);  // Crear una subimagen de 8x8
+        for (int j = 0; j < block.size; ++j) {
+            for (int i = 0; i < block.size; ++i) {
+                block_image.set(j, i, 0, srm.get(block_y + j, block_x + i, 0));  // Copiar el pixel correspondiente
+            }
+        }
+
+        // Realizar la convolución sobre el bloque (subimagen)
+        Image<float> convolved_block = block_image.convolution(kernel);  // Aplicar convolución al bloque
+
+        // Copiar de vuelta el bloque procesado a la imagen de bloques
+        for (int j = 0; j < block.size; ++j) {
+            for (int i = 0; i < block.size; ++i) {
+                block.set_pixel(j, i, 0, convolved_block.get(j, i, 0));  // Reemplazar el bloque en la imagen
+            }
+        }
+    }
+
+    // Crear un búfer temporal para recopilar los bloques procesados en el proceso raíz (rank 0)
+    std::vector<Block<float>> all_blocks;
+    if (rank == 0) {
+        all_blocks.resize(num_blocks);
+    }
+
+    // Recoger todos los bloques procesados en el proceso raíz
+    MPI_Gather(&blocks[start_block], blocks_per_proc * sizeof(Block<float>), MPI_BYTE, all_blocks.data(), blocks_per_proc * sizeof(Block<float>), MPI_BYTE, 0, MPI_COMM_WORLD);
+
+    // Combinar los bloques procesados en la imagen final en el proceso raíz (rank 0)
+    Image<unsigned char> result;
+    if (rank == 0) {
+        result = combine_blocks_to_image(all_blocks, srm.width, srm.height);
+    }
+
     auto end = std::chrono::steady_clock::now();
-    std::cout<<"SRM elapsed time: "<<std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()<<"ms"<<std::endl;
+    if (rank == 0)
+        std::cout << "SRM elapsed time: " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "ms" << std::endl;
+
     return result;
 }
 
-Image<unsigned char> compute_dct(const Image<unsigned char> &image, int block_size, bool invert) {
-    auto begin = std::chrono::steady_clock::now();
-    std::cout<<"Computing"; 
-    if (invert) std::cout<<" inverse";
-    else std::cout<<" direct";
-    std::cout<<" DCT "<<block_size<<"x"<<block_size<<"..."<<std::endl;
-    Image<float> grayscale = image.convert<float>().to_grayscale();
-    std::vector<Block<float>> blocks = grayscale.get_blocks(block_size);
 
-    for(int i=0;i<blocks.size();i++){
+Image<unsigned char> compute_dct(const Image<unsigned char>& image, int block_size, bool invert, int rank, int num_procs) {
+    auto begin = std::chrono::steady_clock::now();
+    std::cout << "Computing DCT on process " << rank << "..." << std::endl;
+
+    Image<float> grayscale = image.convert<float>().to_grayscale();
+    std::vector<Block<float>> blocks = grayscale.get_blocks(block_size);  // Obtener bloques
+
+    int num_blocks = blocks.size();
+    int blocks_per_proc = num_blocks / num_procs;
+    int start_block = rank * blocks_per_proc;
+    int end_block = (rank == num_procs - 1) ? num_blocks : (rank + 1) * blocks_per_proc;
+
+    // Procesar los bloques asignados
+    for (int i = start_block; i < end_block; ++i) {
+        Block<float>& block = blocks[i];
+
+        // Crear la matriz DCT para el bloque
         float **dctBlock = dct::create_matrix(block_size, block_size);
-        dct::direct(dctBlock, blocks[i], 0);
+
+        // Realizar la transformación DCT directa
+        dct::direct(dctBlock, block, 0);
+
+        // Si invertimos el DCT, modificamos los coeficientes
         if (invert) {
-          for(int k=0;k<blocks[i].size/2;k++)
-            for(int l=0;l<blocks[i].size/2;l++)
-              dctBlock[k][l] = 0.0;
-          dct::inverse(blocks[i], dctBlock, 0, 0.0, 255.);
-        }else dct::assign(dctBlock, blocks[i], 0);
+            for (int k = 0; k < block.size / 2; ++k) {
+                for (int l = 0; l < block.size / 2; ++l) {
+                    dctBlock[k][l] = 0.0;  // Eliminar altas frecuencias
+                }
+            }
+            // Realizar la inversa del DCT
+            dct::inverse(block, dctBlock, 0, 0.0, 255.);
+        } else {
+            // Asignar los valores del DCT al bloque
+            dct::assign(dctBlock, block, 0);
+        }
+
+        // Liberar la memoria de la matriz DCT
         dct::delete_matrix(dctBlock);
     }
-    Image<unsigned char> result = grayscale.convert<unsigned char>();
+
+    // Crear un búfer temporal para recoger los bloques procesados
+    std::vector<Block<float>> all_blocks;
+    if (rank == 0) {
+        all_blocks.resize(num_blocks);  // Crear el búfer de recepción
+    }
+
+    // Recoger los bloques procesados en el proceso raíz
+    MPI_Gather(&blocks[start_block], blocks_per_proc * sizeof(Block<float>), MPI_BYTE,
+               all_blocks.data(), blocks_per_proc * sizeof(Block<float>), MPI_BYTE, 0, MPI_COMM_WORLD);
+
+    // Combinar los bloques procesados en una imagen final en el proceso raíz (rank 0)
+    Image<unsigned char> result;
+    if (rank == 0) {
+        result = combine_blocks_to_image(all_blocks, grayscale.width, grayscale.height);
+    }
+
     auto end = std::chrono::steady_clock::now();
-    std::cout<<"DCT elapsed time: "<<std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()<<"ms"<<std::endl;
+    if (rank == 0)
+        std::cout << "DCT elapsed time: " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "ms" << std::endl;
+
     return result;
 }
 
-Image<unsigned char> compute_ela(const Image<unsigned char> &image, int quality){
-    std::cout<<"Computing ELA..."<<std::endl;
+
+// Función compute_ela (que se debe implementar)
+Image<unsigned char> compute_ela(const Image<unsigned char>& image, int quality) {
+    std::cout << "Computing ELA..." << std::endl;
     auto begin = std::chrono::steady_clock::now();
+    
+    // Aquí va la lógica de la función ELA (como en tu código original)
     Image<unsigned char> grayscale = image.to_grayscale();
     save_to_file("_temp.jpg", grayscale, quality);
     Image<float> compressed = load_from_file("_temp.jpg").convert<float>();
-    compressed = compressed + (grayscale.convert<float>()*(-1));
+    compressed = compressed + (grayscale.convert<float>() * (-1));
     compressed = compressed.abs().normalized() * 255;
     Image<unsigned char> result = compressed.convert<unsigned char>();
+
     auto end = std::chrono::steady_clock::now();
-    std::cout<<"ELA elapsed time: "<<std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count()<<"ms"<<std::endl;
+    std::cout << "ELA elapsed time: " << std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count() << "ms" << std::endl;
+
     return result;
 }
 
@@ -101,20 +209,25 @@ int main(int argc, char **argv) {
     int rank, procs;
     MPI_Comm_size(MPI_COMM_WORLD, &procs);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    std::cout<<"This is process "<<rank<<" of "<<procs<<std::endl;
-    if(argc == 1) {
-        std::cerr<<"Image filename missing from arguments. Usage ./dct <filename>"<<std::endl;
+
+    std::cout << "This is process " << rank << " of " << procs << std::endl;
+
+    if (argc == 1) {
+        std::cerr << "Image filename missing from arguments. Usage ./dct <filename>" << std::endl;
         exit(1);
     }
-    int block_size=8;
-    Image<unsigned char> image = load_from_file(argv[1]);
-    Image<unsigned char> srm3x3 = compute_srm(image, 3);
-    save_to_file("srm_kernel_3x3.png", srm3x3);
-    save_to_file("srm_kernel_5x5.png", compute_srm(image, 5));
-    save_to_file("ela.png", compute_ela(image, 90));
-    save_to_file("dct_invert.png", compute_dct(image, block_size, true));
-    save_to_file("dct_direct.png", compute_dct(image, block_size, false));
-    MPI_Finalize();
 
+    Image<unsigned char> image = load_from_file(argv[1]);
+    int block_size = 8;
+
+    // Calcular y guardar los resultados
+    Image<unsigned char> srm3x3 = compute_srm(image, 3, rank, procs);
+    save_to_file("srm_kernel_3x3.png", srm3x3);
+    save_to_file("srm_kernel_5x5.png", compute_srm(image, 5, rank, procs));
+    save_to_file("ela.png", compute_ela(image, 90)); // Esta parte no está paralelizada por simplicidad
+    save_to_file("dct_invert.png", compute_dct(image, block_size, true, rank, procs));
+    save_to_file("dct_direct.png", compute_dct(image, block_size, false, rank, procs));
+
+    MPI_Finalize();
     return 0;
 }

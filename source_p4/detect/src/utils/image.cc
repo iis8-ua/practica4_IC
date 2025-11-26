@@ -246,3 +246,6 @@ void save_to_file(const std::string &filename, const Image<unsigned char> &image
     else if (extension == ".jpeg" || extension == ".JPEG" || extension == ".jpg" || extension == ".JPG")
         write_jpeg(filename, image, quality);
 }
+
+
+

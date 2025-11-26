@@ -1104,3 +1104,1092 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-4LxHJI"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-4LxHJI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-4LxHJI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d4060/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d4060.dir/build.make CMakeFiles/cmTC_d4060.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-4LxHJI'
+        Building C object CMakeFiles/cmTC_d4060.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_d4060.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-4LxHJI/test_mpi.c
+        Linking C executable cmTC_d4060
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4060.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_d4060.dir/test_mpi.c.o -o cmTC_d4060  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-4LxHJI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zDDH2J"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zDDH2J"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zDDH2J'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_97065/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_97065.dir/build.make CMakeFiles/cmTC_97065.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zDDH2J'
+        Building CXX object CMakeFiles/cmTC_97065.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_97065.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zDDH2J/test_mpi.cpp
+        Linking CXX executable cmTC_97065
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_97065.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_97065.dir/test_mpi.cpp.o -o cmTC_97065  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zDDH2J'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-XsRJDp"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-XsRJDp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-XsRJDp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_cd9fa/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_cd9fa.dir/build.make CMakeFiles/cmTC_cd9fa.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-XsRJDp'
+        Building CXX object CMakeFiles/cmTC_cd9fa.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_cd9fa.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-XsRJDp/test_mpi.cpp
+        Linking CXX executable cmTC_cd9fa
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd9fa.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_cd9fa.dir/test_mpi.cpp.o -o cmTC_cd9fa  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-XsRJDp'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-1ZO3dg"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-1ZO3dg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-1ZO3dg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ac9ec/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ac9ec.dir/build.make CMakeFiles/cmTC_ac9ec.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-1ZO3dg'
+        Building C object CMakeFiles/cmTC_ac9ec.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_ac9ec.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-1ZO3dg/test_mpi.c
+        Linking C executable cmTC_ac9ec
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ac9ec.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_ac9ec.dir/test_mpi.c.o -o cmTC_ac9ec  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-1ZO3dg'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-aDYxxv"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-aDYxxv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-aDYxxv'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_8c004/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_8c004.dir/build.make CMakeFiles/cmTC_8c004.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-aDYxxv'
+        Building CXX object CMakeFiles/cmTC_8c004.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_8c004.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-aDYxxv/test_mpi.cpp
+        Linking CXX executable cmTC_8c004
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8c004.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_8c004.dir/test_mpi.cpp.o -o cmTC_8c004  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-aDYxxv'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-nDTFg2"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-nDTFg2"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-nDTFg2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7fd69/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7fd69.dir/build.make CMakeFiles/cmTC_7fd69.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-nDTFg2'
+        Building CXX object CMakeFiles/cmTC_7fd69.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_7fd69.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-nDTFg2/test_mpi.cpp
+        Linking CXX executable cmTC_7fd69
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7fd69.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_7fd69.dir/test_mpi.cpp.o -o cmTC_7fd69  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-nDTFg2'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zApgXs"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zApgXs"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zApgXs'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f0229/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f0229.dir/build.make CMakeFiles/cmTC_f0229.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zApgXs'
+        Building C object CMakeFiles/cmTC_f0229.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_f0229.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zApgXs/test_mpi.c
+        Linking C executable cmTC_f0229
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f0229.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_f0229.dir/test_mpi.c.o -o cmTC_f0229  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-zApgXs'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ss3AP1"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ss3AP1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ss3AP1'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c66da/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c66da.dir/build.make CMakeFiles/cmTC_c66da.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ss3AP1'
+        Building CXX object CMakeFiles/cmTC_c66da.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_c66da.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ss3AP1/test_mpi.cpp
+        Linking CXX executable cmTC_c66da
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c66da.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_c66da.dir/test_mpi.cpp.o -o cmTC_c66da  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ss3AP1'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Pd02sc"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Pd02sc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Pd02sc'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_dfe0e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_dfe0e.dir/build.make CMakeFiles/cmTC_dfe0e.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Pd02sc'
+        Building CXX object CMakeFiles/cmTC_dfe0e.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_dfe0e.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Pd02sc/test_mpi.cpp
+        Linking CXX executable cmTC_dfe0e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfe0e.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_dfe0e.dir/test_mpi.cpp.o -o cmTC_dfe0e  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Pd02sc'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-BTtEOa"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-BTtEOa"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-BTtEOa'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d7195/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d7195.dir/build.make CMakeFiles/cmTC_d7195.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-BTtEOa'
+        Building C object CMakeFiles/cmTC_d7195.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_d7195.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-BTtEOa/test_mpi.c
+        Linking C executable cmTC_d7195
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d7195.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_d7195.dir/test_mpi.c.o -o cmTC_d7195  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-BTtEOa'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SSsd3D"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SSsd3D"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SSsd3D'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a4d58/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a4d58.dir/build.make CMakeFiles/cmTC_a4d58.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SSsd3D'
+        Building CXX object CMakeFiles/cmTC_a4d58.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_a4d58.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SSsd3D/test_mpi.cpp
+        Linking CXX executable cmTC_a4d58
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4d58.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_a4d58.dir/test_mpi.cpp.o -o cmTC_a4d58  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SSsd3D'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-CWtuZ0"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-CWtuZ0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-CWtuZ0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a06f3/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_a06f3.dir/build.make CMakeFiles/cmTC_a06f3.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-CWtuZ0'
+        Building CXX object CMakeFiles/cmTC_a06f3.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_a06f3.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-CWtuZ0/test_mpi.cpp
+        Linking CXX executable cmTC_a06f3
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a06f3.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_a06f3.dir/test_mpi.cpp.o -o cmTC_a06f3  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-CWtuZ0'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-M7FahC"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-M7FahC"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-M7FahC'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6050f/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6050f.dir/build.make CMakeFiles/cmTC_6050f.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-M7FahC'
+        Building C object CMakeFiles/cmTC_6050f.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_6050f.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-M7FahC/test_mpi.c
+        Linking C executable cmTC_6050f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6050f.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_6050f.dir/test_mpi.c.o -o cmTC_6050f  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-M7FahC'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-81bL1h"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-81bL1h"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-81bL1h'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3fb19/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3fb19.dir/build.make CMakeFiles/cmTC_3fb19.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-81bL1h'
+        Building CXX object CMakeFiles/cmTC_3fb19.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_3fb19.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-81bL1h/test_mpi.cpp
+        Linking CXX executable cmTC_3fb19
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fb19.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_3fb19.dir/test_mpi.cpp.o -o cmTC_3fb19  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-81bL1h'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gyInLh"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gyInLh"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gyInLh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0307a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0307a.dir/build.make CMakeFiles/cmTC_0307a.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gyInLh'
+        Building CXX object CMakeFiles/cmTC_0307a.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_0307a.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gyInLh/test_mpi.cpp
+        Linking CXX executable cmTC_0307a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0307a.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_0307a.dir/test_mpi.cpp.o -o cmTC_0307a  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gyInLh'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Z6uvpp"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Z6uvpp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Z6uvpp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_3343e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_3343e.dir/build.make CMakeFiles/cmTC_3343e.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Z6uvpp'
+        Building C object CMakeFiles/cmTC_3343e.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_3343e.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Z6uvpp/test_mpi.c
+        Linking C executable cmTC_3343e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3343e.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_3343e.dir/test_mpi.c.o -o cmTC_3343e  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Z6uvpp'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YDic5i"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YDic5i"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YDic5i'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_22618/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_22618.dir/build.make CMakeFiles/cmTC_22618.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YDic5i'
+        Building CXX object CMakeFiles/cmTC_22618.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_22618.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YDic5i/test_mpi.cpp
+        Linking CXX executable cmTC_22618
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_22618.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_22618.dir/test_mpi.cpp.o -o cmTC_22618  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YDic5i'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Mh9EYZ"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Mh9EYZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Mh9EYZ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1ee7d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1ee7d.dir/build.make CMakeFiles/cmTC_1ee7d.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Mh9EYZ'
+        Building CXX object CMakeFiles/cmTC_1ee7d.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_1ee7d.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Mh9EYZ/test_mpi.cpp
+        Linking CXX executable cmTC_1ee7d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ee7d.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_1ee7d.dir/test_mpi.cpp.o -o cmTC_1ee7d  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-Mh9EYZ'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-GSTpid"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-GSTpid"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-GSTpid'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c3f10/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_c3f10.dir/build.make CMakeFiles/cmTC_c3f10.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-GSTpid'
+        Building C object CMakeFiles/cmTC_c3f10.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_c3f10.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-GSTpid/test_mpi.c
+        Linking C executable cmTC_c3f10
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3f10.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_c3f10.dir/test_mpi.c.o -o cmTC_c3f10  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-GSTpid'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SptAaa"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SptAaa"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SptAaa'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fe8ad/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fe8ad.dir/build.make CMakeFiles/cmTC_fe8ad.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SptAaa'
+        Building CXX object CMakeFiles/cmTC_fe8ad.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_fe8ad.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SptAaa/test_mpi.cpp
+        Linking CXX executable cmTC_fe8ad
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fe8ad.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_fe8ad.dir/test_mpi.cpp.o -o cmTC_fe8ad  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-SptAaa'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-9toAku"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-9toAku"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-9toAku'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_51261/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_51261.dir/build.make CMakeFiles/cmTC_51261.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-9toAku'
+        Building CXX object CMakeFiles/cmTC_51261.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_51261.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-9toAku/test_mpi.cpp
+        Linking CXX executable cmTC_51261
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51261.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_51261.dir/test_mpi.cpp.o -o cmTC_51261  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-9toAku'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ze2wAN"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ze2wAN"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ze2wAN'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_62fc7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_62fc7.dir/build.make CMakeFiles/cmTC_62fc7.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ze2wAN'
+        Building C object CMakeFiles/cmTC_62fc7.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_62fc7.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ze2wAN/test_mpi.c
+        Linking C executable cmTC_62fc7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62fc7.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_62fc7.dir/test_mpi.c.o -o cmTC_62fc7  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ze2wAN'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gUh5Z4"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gUh5Z4"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gUh5Z4'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b4dc2/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b4dc2.dir/build.make CMakeFiles/cmTC_b4dc2.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gUh5Z4'
+        Building CXX object CMakeFiles/cmTC_b4dc2.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_b4dc2.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gUh5Z4/test_mpi.cpp
+        Linking CXX executable cmTC_b4dc2
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b4dc2.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_b4dc2.dir/test_mpi.cpp.o -o cmTC_b4dc2  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-gUh5Z4'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-lhN4an"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-lhN4an"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-lhN4an'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7dd9a/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_7dd9a.dir/build.make CMakeFiles/cmTC_7dd9a.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-lhN4an'
+        Building CXX object CMakeFiles/cmTC_7dd9a.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_7dd9a.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-lhN4an/test_mpi.cpp
+        Linking CXX executable cmTC_7dd9a
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7dd9a.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_7dd9a.dir/test_mpi.cpp.o -o cmTC_7dd9a  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-lhN4an'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-xwYJ4h"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-xwYJ4h"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-xwYJ4h'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d3bd8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d3bd8.dir/build.make CMakeFiles/cmTC_d3bd8.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-xwYJ4h'
+        Building C object CMakeFiles/cmTC_d3bd8.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_d3bd8.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-xwYJ4h/test_mpi.c
+        Linking C executable cmTC_d3bd8
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d3bd8.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_d3bd8.dir/test_mpi.c.o -o cmTC_d3bd8  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-xwYJ4h'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YV67Y0"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YV67Y0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YV67Y0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1b8b1/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_1b8b1.dir/build.make CMakeFiles/cmTC_1b8b1.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YV67Y0'
+        Building CXX object CMakeFiles/cmTC_1b8b1.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_1b8b1.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YV67Y0/test_mpi.cpp
+        Linking CXX executable cmTC_1b8b1
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b8b1.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_1b8b1.dir/test_mpi.cpp.o -o cmTC_1b8b1  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-YV67Y0'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-htm0b0"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-htm0b0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-htm0b0'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ebf8d/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_ebf8d.dir/build.make CMakeFiles/cmTC_ebf8d.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-htm0b0'
+        Building CXX object CMakeFiles/cmTC_ebf8d.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_ebf8d.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-htm0b0/test_mpi.cpp
+        Linking CXX executable cmTC_ebf8d
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ebf8d.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_ebf8d.dir/test_mpi.cpp.o -o cmTC_ebf8d  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-htm0b0'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-noIAf9"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-noIAf9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-noIAf9'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d98ee/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d98ee.dir/build.make CMakeFiles/cmTC_d98ee.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-noIAf9'
+        Building C object CMakeFiles/cmTC_d98ee.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_d98ee.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-noIAf9/test_mpi.c
+        Linking C executable cmTC_d98ee
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d98ee.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_d98ee.dir/test_mpi.c.o -o cmTC_d98ee  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-noIAf9'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ljdgva"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ljdgva"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ljdgva'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aa58e/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_aa58e.dir/build.make CMakeFiles/cmTC_aa58e.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ljdgva'
+        Building CXX object CMakeFiles/cmTC_aa58e.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_aa58e.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ljdgva/test_mpi.cpp
+        Linking CXX executable cmTC_aa58e
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa58e.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_aa58e.dir/test_mpi.cpp.o -o cmTC_aa58e  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-ljdgva'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-vbQLyg"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-vbQLyg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-vbQLyg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_f31cf/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_f31cf.dir/build.make CMakeFiles/cmTC_f31cf.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-vbQLyg'
+        Building CXX object CMakeFiles/cmTC_f31cf.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_f31cf.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-vbQLyg/test_mpi.cpp
+        Linking CXX executable cmTC_f31cf
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f31cf.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_f31cf.dir/test_mpi.cpp.o -o cmTC_f31cf  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-vbQLyg'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-oaazN3"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-oaazN3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-oaazN3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_513bc/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_513bc.dir/build.make CMakeFiles/cmTC_513bc.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-oaazN3'
+        Building C object CMakeFiles/cmTC_513bc.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_513bc.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-oaazN3/test_mpi.c
+        Linking C executable cmTC_513bc
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_513bc.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_513bc.dir/test_mpi.c.o -o cmTC_513bc  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-oaazN3'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-hv06yE"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-hv06yE"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-hv06yE'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_77c15/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_77c15.dir/build.make CMakeFiles/cmTC_77c15.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-hv06yE'
+        Building CXX object CMakeFiles/cmTC_77c15.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_77c15.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-hv06yE/test_mpi.cpp
+        Linking CXX executable cmTC_77c15
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_77c15.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_77c15.dir/test_mpi.cpp.o -o cmTC_77c15  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-hv06yE'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-UFNKeq"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-UFNKeq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-UFNKeq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_6a165/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_6a165.dir/build.make CMakeFiles/cmTC_6a165.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-UFNKeq'
+        Building CXX object CMakeFiles/cmTC_6a165.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_6a165.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-UFNKeq/test_mpi.cpp
+        Linking CXX executable cmTC_6a165
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6a165.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_6a165.dir/test_mpi.cpp.o -o cmTC_6a165  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-UFNKeq'
+        
+      exitCode: 0
+...
