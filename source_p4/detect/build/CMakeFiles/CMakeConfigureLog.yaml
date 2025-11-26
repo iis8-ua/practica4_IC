@@ -2193,3 +2193,102 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-glCKRo"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-glCKRo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-glCKRo'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b33d7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b33d7.dir/build.make CMakeFiles/cmTC_b33d7.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-glCKRo'
+        Building C object CMakeFiles/cmTC_b33d7.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /opt/mpich-4.2.1/include  -o CMakeFiles/cmTC_b33d7.dir/test_mpi.c.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-glCKRo/test_mpi.c
+        Linking C executable cmTC_b33d7
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b33d7.dir/link.txt --verbose=1
+        /usr/bin/cc -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_b33d7.dir/test_mpi.c.o -o cmTC_b33d7  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-glCKRo'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-W9DF3c"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-W9DF3c"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-W9DF3c'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_43c78/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_43c78.dir/build.make CMakeFiles/cmTC_43c78.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-W9DF3c'
+        Building CXX object CMakeFiles/cmTC_43c78.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_43c78.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-W9DF3c/test_mpi.cpp
+        Linking CXX executable cmTC_43c78
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_43c78.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_43c78.dir/test_mpi.cpp.o -o cmTC_43c78  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-W9DF3c'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-MUUFTj"
+      binary: "/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-MUUFTj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-MUUFTj'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bf0f4/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bf0f4.dir/build.make CMakeFiles/cmTC_bf0f4.dir/build
+        gmake[1]: se entra en el directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-MUUFTj'
+        Building CXX object CMakeFiles/cmTC_bf0f4.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /opt/mpich-4.2.1/include -std=gnu++17 -o CMakeFiles/cmTC_bf0f4.dir/test_mpi.cpp.o -c /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-MUUFTj/test_mpi.cpp
+        Linking CXX executable cmTC_bf0f4
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf0f4.dir/link.txt --verbose=1
+        /usr/bin/c++ -Wl,-rpath -Wl,/opt/mpich-4.2.1/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_bf0f4.dir/test_mpi.cpp.o -o cmTC_bf0f4  -Wl,-rpath,/opt/mpich-4.2.1/lib /opt/mpich-4.2.1/lib/libmpicxx.so /opt/mpich-4.2.1/lib/libmpi.so 
+        gmake[1]: se sale del directorio '/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-MUUFTj'
+        
+      exitCode: 0
+...

@@ -13,6 +13,7 @@
 #include "mpi.h"
 
 Image<float> get_srm_3x3() {
+    std::cout << "Creating SRM 3x3 kernel..." << std::endl;
     Image<float> kernel(3, 3, 1);
     kernel.set(0, 0, 0, -1); kernel.set(0, 1, 0, 2); kernel.set(0, 2, 0, -1);
     kernel.set(1, 0, 0, 2); kernel.set(1, 1, 0, -4); kernel.set(1, 2, 0, 2);
@@ -21,6 +22,7 @@ Image<float> get_srm_3x3() {
 }
 
 Image<float> get_srm_5x5() {
+    std::cout << "Creating SRM 5x5 kernel..." << std::endl;
     Image<float> kernel(5, 5, 1);
     kernel.set(0, 0, 0, -1); kernel.set(0, 1, 0, 2); kernel.set(0, 2, 0, -2); kernel.set(0, 3, 0, 2); kernel.set(0, 4, 0, -1);
     kernel.set(1, 0, 0, 2); kernel.set(1, 1, 0, -6); kernel.set(1, 2, 0, 8); kernel.set(1, 3, 0, -6); kernel.set(1, 4, 0, 2);
@@ -31,6 +33,7 @@ Image<float> get_srm_5x5() {
 }
 
 Image<float> get_srm_kernel(int size) {
+    std::cout << "Getting SRM kernel of size " << size << "x" << size << std::endl;
     assert(size == 3 || size == 5);
     switch(size){
         case 3:
@@ -41,15 +44,13 @@ Image<float> get_srm_kernel(int size) {
     return get_srm_3x3();
 }
 
-// Función que combina los bloques procesados en una imagen completa
 Image<unsigned char> combine_blocks_to_image(const std::vector<Block<float>>& blocks, int width, int height) {
+    std::cout << "Combining blocks into image of size " << width << "x" << height << "..." << std::endl;
     Image<unsigned char> result(width, height, 1);  // Crear una nueva imagen para el resultado
 
-    // Recorrer los bloques y colocarlos en la imagen final
     for (const auto& block : blocks) {
         for (int row = 0; row < block.size; ++row) {
             for (int col = 0; col < block.size; ++col) {
-                // Copiar el valor del bloque a la imagen
                 result.set(block.j + row, block.i + col, 0, static_cast<unsigned char>(block.get_pixel(row, col, 0)));
             }
         }
@@ -57,27 +58,29 @@ Image<unsigned char> combine_blocks_to_image(const std::vector<Block<float>>& bl
 
     return result;
 }
-// Función compute_srm con corrección en la llamada a MPI_Gather
+
 Image<unsigned char> compute_srm(const Image<unsigned char>& image, int kernel_size, int rank, int num_procs) {
     auto begin = std::chrono::steady_clock::now();
     std::cout << "Computing SRM " << kernel_size << "x" << kernel_size << " on process " << rank << "..." << std::endl;
 
-    // Convertir a escala de grises y a flotante
     Image<float> srm = image.to_grayscale().convert<float>();
     Image<float> kernel = get_srm_kernel(kernel_size);  // Obtener el kernel SRM
+    std::cout << "SRM and kernel loaded." << std::endl;
 
-    // Dividir la imagen en bloques y asignar bloques a cada proceso
     std::vector<Block<float>> blocks = srm.get_blocks(8);  // Usar bloques de 8x8
     int num_blocks = blocks.size();
+    std::cout << "Number of blocks: " << num_blocks << std::endl;
+
     int blocks_per_proc = num_blocks / num_procs;
     int start_block = rank * blocks_per_proc;
     int end_block = (rank == num_procs - 1) ? num_blocks : (rank + 1) * blocks_per_proc;
 
-    // Procesar los bloques asignados
+    std::cout << "Process " << rank << " processing blocks from " << start_block << " to " << end_block - 1 << std::endl;
+
     for (int i = start_block; i < end_block; ++i) {
         Block<float>& block = blocks[i];
+        std::cout << "Process " << rank << " processing block " << i << " at (" << block.i << ", " << block.j << ")" << std::endl;
 
-        // Extraer el bloque como una subimagen de la imagen original
         int block_x = block.i;  // Coordenada x de la esquina superior izquierda del bloque
         int block_y = block.j;  // Coordenada y de la esquina superior izquierda del bloque
         Image<float> block_image(8, 8, 1);  // Crear una subimagen de 8x8
@@ -87,10 +90,9 @@ Image<unsigned char> compute_srm(const Image<unsigned char>& image, int kernel_s
             }
         }
 
-        // Realizar la convolución sobre el bloque (subimagen)
         Image<float> convolved_block = block_image.convolution(kernel);  // Aplicar convolución al bloque
+        std::cout << "Process " << rank << " completed convolution on block " << i << std::endl;
 
-        // Copiar de vuelta el bloque procesado a la imagen de bloques
         for (int j = 0; j < block.size; ++j) {
             for (int i = 0; i < block.size; ++i) {
                 block.set_pixel(j, i, 0, convolved_block.get(j, i, 0));  // Reemplazar el bloque en la imagen
@@ -98,19 +100,18 @@ Image<unsigned char> compute_srm(const Image<unsigned char>& image, int kernel_s
         }
     }
 
-    // Crear un búfer temporal para recopilar los bloques procesados en el proceso raíz (rank 0)
     std::vector<Block<float>> all_blocks;
     if (rank == 0) {
         all_blocks.resize(num_blocks);
+        std::cout << "Process 0 gathering all blocks..." << std::endl;
     }
 
-    // Recoger todos los bloques procesados en el proceso raíz
     MPI_Gather(&blocks[start_block], blocks_per_proc * sizeof(Block<float>), MPI_BYTE, all_blocks.data(), blocks_per_proc * sizeof(Block<float>), MPI_BYTE, 0, MPI_COMM_WORLD);
 
-    // Combinar los bloques procesados en la imagen final en el proceso raíz (rank 0)
     Image<unsigned char> result;
     if (rank == 0) {
         result = combine_blocks_to_image(all_blocks, srm.width, srm.height);
+        std::cout << "Process 0 finished combining blocks into image." << std::endl;
     }
 
     auto end = std::chrono::steady_clock::now();
@@ -120,7 +121,6 @@ Image<unsigned char> compute_srm(const Image<unsigned char>& image, int kernel_s
     return result;
 }
 
-
 Image<unsigned char> compute_dct(const Image<unsigned char>& image, int block_size, bool invert, int rank, int num_procs) {
     auto begin = std::chrono::steady_clock::now();
     std::cout << "Computing DCT on process " << rank << "..." << std::endl;
@@ -129,52 +129,46 @@ Image<unsigned char> compute_dct(const Image<unsigned char>& image, int block_si
     std::vector<Block<float>> blocks = grayscale.get_blocks(block_size);  // Obtener bloques
 
     int num_blocks = blocks.size();
+    std::cout << "Number of DCT blocks: " << num_blocks << std::endl;
+
     int blocks_per_proc = num_blocks / num_procs;
     int start_block = rank * blocks_per_proc;
     int end_block = (rank == num_procs - 1) ? num_blocks : (rank + 1) * blocks_per_proc;
 
-    // Procesar los bloques asignados
     for (int i = start_block; i < end_block; ++i) {
         Block<float>& block = blocks[i];
+        std::cout << "Process " << rank << " processing DCT block " << i << std::endl;
 
-        // Crear la matriz DCT para el bloque
         float **dctBlock = dct::create_matrix(block_size, block_size);
-
-        // Realizar la transformación DCT directa
         dct::direct(dctBlock, block, 0);
 
-        // Si invertimos el DCT, modificamos los coeficientes
         if (invert) {
+            std::cout << "Process " << rank << " applying inverse DCT on block " << i << std::endl;
             for (int k = 0; k < block.size / 2; ++k) {
                 for (int l = 0; l < block.size / 2; ++l) {
                     dctBlock[k][l] = 0.0;  // Eliminar altas frecuencias
                 }
             }
-            // Realizar la inversa del DCT
             dct::inverse(block, dctBlock, 0, 0.0, 255.);
         } else {
-            // Asignar los valores del DCT al bloque
             dct::assign(dctBlock, block, 0);
         }
 
-        // Liberar la memoria de la matriz DCT
         dct::delete_matrix(dctBlock);
     }
 
-    // Crear un búfer temporal para recoger los bloques procesados
     std::vector<Block<float>> all_blocks;
     if (rank == 0) {
         all_blocks.resize(num_blocks);  // Crear el búfer de recepción
     }
 
-    // Recoger los bloques procesados en el proceso raíz
     MPI_Gather(&blocks[start_block], blocks_per_proc * sizeof(Block<float>), MPI_BYTE,
                all_blocks.data(), blocks_per_proc * sizeof(Block<float>), MPI_BYTE, 0, MPI_COMM_WORLD);
 
-    // Combinar los bloques procesados en una imagen final en el proceso raíz (rank 0)
     Image<unsigned char> result;
     if (rank == 0) {
         result = combine_blocks_to_image(all_blocks, grayscale.width, grayscale.height);
+        std::cout << "Process 0 finished DCT computation." << std::endl;
     }
 
     auto end = std::chrono::steady_clock::now();
@@ -184,13 +178,10 @@ Image<unsigned char> compute_dct(const Image<unsigned char>& image, int block_si
     return result;
 }
 
-
-// Función compute_ela (que se debe implementar)
 Image<unsigned char> compute_ela(const Image<unsigned char>& image, int quality) {
     std::cout << "Computing ELA..." << std::endl;
     auto begin = std::chrono::steady_clock::now();
     
-    // Aquí va la lógica de la función ELA (como en tu código original)
     Image<unsigned char> grayscale = image.to_grayscale();
     save_to_file("_temp.jpg", grayscale, quality);
     Image<float> compressed = load_from_file("_temp.jpg").convert<float>();
@@ -220,7 +211,6 @@ int main(int argc, char **argv) {
     Image<unsigned char> image = load_from_file(argv[1]);
     int block_size = 8;
 
-    // Calcular y guardar los resultados
     Image<unsigned char> srm3x3 = compute_srm(image, 3, rank, procs);
     save_to_file("srm_kernel_3x3.png", srm3x3);
     save_to_file("srm_kernel_5x5.png", compute_srm(image, 5, rank, procs));
