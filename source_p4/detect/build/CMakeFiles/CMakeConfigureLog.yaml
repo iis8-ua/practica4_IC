@@ -1203,3 +1203,108 @@ events:
         
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH"
+      binary: "/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b5f7b/fast
+        gmake[1]: se entra en el directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_b5f7b.dir/build.make CMakeFiles/cmTC_b5f7b.dir/build
+        gmake[2]: se entra en el directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH'
+        Building C object CMakeFiles/cmTC_b5f7b.dir/test_mpi.c.o
+        /usr/bin/cc  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi  -o CMakeFiles/cmTC_b5f7b.dir/test_mpi.c.o -c /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH/test_mpi.c
+        Linking C executable cmTC_b5f7b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5f7b.dir/link.txt --verbose=1
+        /usr/bin/cc CMakeFiles/cmTC_b5f7b.dir/test_mpi.c.o -o cmTC_b5f7b  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[2]: se sale del directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH'
+        gmake[1]: se sale del directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-J0lMBH'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly"
+      binary: "/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e7862/fast
+        gmake[1]: se entra en el directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_e7862.dir/build.make CMakeFiles/cmTC_e7862.dir/build
+        gmake[2]: se entra en el directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly'
+        Building CXX object CMakeFiles/cmTC_e7862.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu++17 -o CMakeFiles/cmTC_e7862.dir/test_mpi.cpp.o -c /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly/test_mpi.cpp
+        Linking CXX executable cmTC_e7862
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7862.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_e7862.dir/test_mpi.cpp.o -o cmTC_e7862  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[2]: se sale del directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly'
+        gmake[1]: se sale del directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-2jbZly'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "CMakeLists.txt:7 (find_package)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp"
+      binary: "/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_94fef/fast
+        gmake[1]: se entra en el directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp'
+        /usr/bin/gmake  -f CMakeFiles/cmTC_94fef.dir/build.make CMakeFiles/cmTC_94fef.dir/build
+        gmake[2]: se entra en el directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp'
+        Building CXX object CMakeFiles/cmTC_94fef.dir/test_mpi.cpp.o
+        /usr/bin/c++  -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -std=gnu++17 -o CMakeFiles/cmTC_94fef.dir/test_mpi.cpp.o -c /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp/test_mpi.cpp
+        Linking CXX executable cmTC_94fef
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_94fef.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_94fef.dir/test_mpi.cpp.o -o cmTC_94fef  -Wl,-rpath,/usr/lib/x86_64-linux-gnu/openmpi/lib /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi_cxx.so /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so 
+        gmake[2]: se sale del directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp'
+        gmake[1]: se sale del directorio '/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/CMakeScratch/TryCompile-L5ycFp'
+        
+      exitCode: 0
+...
