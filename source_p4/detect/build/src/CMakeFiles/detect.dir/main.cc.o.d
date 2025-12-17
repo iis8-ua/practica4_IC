@@ -1,5 +1,5 @@
 src/CMakeFiles/detect.dir/main.cc.o: \
- /home/alumno/practica4_IC/source_p4/detect/src/main.cc \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/main.cc \
  /usr/include/stdc-predef.h /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -204,12 +204,11 @@ src/CMakeFiles/detect.dir/main.cc.o: \
  /usr/include/c++/13/backward/auto_ptr.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/image.h \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.h \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/image.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/image.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/dct.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/image.h \
  /usr/include/c++/13/chrono /usr/include/c++/13/bits/chrono.h \
  /usr/include/c++/13/ratio /usr/include/c++/13/cstdint \
  /usr/include/c++/13/ctime /usr/include/c++/13/bits/parse_numbers.h \
- /opt/mpich-4.2.1/include/mpi.h /opt/mpich-4.2.1/include/mpi_proto.h \
- /opt/mpich-4.2.1/include/mpio.h /opt/mpich-4.2.1/include/mpi.h \
- /opt/mpich-4.2.1/include/mpicxx.h
+ /usr/lib/x86_64-linux-gnu/openmpi/include/mpi.h \
+ /usr/lib/x86_64-linux-gnu/openmpi/include/mpi_portable_platform.h

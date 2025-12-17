@@ -1,7 +1,7 @@
 src/utils/CMakeFiles/utils.dir/image.cc.o: \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/image.cc \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/image.cc \
  /usr/include/stdc-predef.h \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/image.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/image.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -181,9 +181,9 @@ src/utils/CMakeFiles/utils.dir/image.cc.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h /usr/include/setjmp.h \
- /home/alumno/practica4_IC/source_p4/detect/src/libjpeg/jpeglib.h \
- /home/alumno/practica4_IC/source_p4/detect/src/libjpeg/build/jconfig.h \
- /home/alumno/practica4_IC/source_p4/detect/src/libjpeg/jmorecfg.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/jpeglib.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/build/jconfig.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/jmorecfg.h \
  /usr/include/c++/13/filesystem /usr/include/c++/13/bits/fs_fwd.h \
  /usr/include/c++/13/cstdint /usr/include/c++/13/bits/chrono.h \
  /usr/include/c++/13/ratio /usr/include/c++/13/limits \

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/usuariocp/practica4_IC/source_p4/detect/src/libjpeg/build -I/home/usuariocp/practica4_IC/source_p4/detect/src/libjpeg
+CXX_INCLUDES = -I/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/build -I/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg
 
 CXX_FLAGS =  -fopenmp -std=gnu++17
 

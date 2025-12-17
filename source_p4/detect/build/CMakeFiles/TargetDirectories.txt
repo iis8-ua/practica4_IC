@@ -1,8 +1,8 @@
-/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles/edit_cache.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles/rebuild_cache.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/src/CMakeFiles/detect.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/src/CMakeFiles/edit_cache.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/src/CMakeFiles/rebuild_cache.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/src/utils/CMakeFiles/utils.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/src/utils/CMakeFiles/edit_cache.dir
-/home/usuariocp/practica4_IC/source_p4/detect/build/src/utils/CMakeFiles/rebuild_cache.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/edit_cache.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles/rebuild_cache.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/CMakeFiles/detect.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/CMakeFiles/edit_cache.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/CMakeFiles/rebuild_cache.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/utils/CMakeFiles/utils.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/utils/CMakeFiles/edit_cache.dir
+/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/utils/CMakeFiles/rebuild_cache.dir

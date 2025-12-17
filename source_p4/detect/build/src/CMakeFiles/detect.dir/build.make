@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuariocp/practica4_IC/source_p4/detect
+CMAKE_SOURCE_DIR = /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuariocp/practica4_IC/source_p4/detect/build
+CMAKE_BINARY_DIR = /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/detect.dir/depend.make
@@ -70,18 +70,18 @@ include src/CMakeFiles/detect.dir/progress.make
 include src/CMakeFiles/detect.dir/flags.make
 
 src/CMakeFiles/detect.dir/main.cc.o: src/CMakeFiles/detect.dir/flags.make
-src/CMakeFiles/detect.dir/main.cc.o: /home/usuariocp/practica4_IC/source_p4/detect/src/main.cc
+src/CMakeFiles/detect.dir/main.cc.o: /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/main.cc
 src/CMakeFiles/detect.dir/main.cc.o: src/CMakeFiles/detect.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/detect.dir/main.cc.o"
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/detect.dir/main.cc.o -MF CMakeFiles/detect.dir/main.cc.o.d -o CMakeFiles/detect.dir/main.cc.o -c /home/usuariocp/practica4_IC/source_p4/detect/src/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/detect.dir/main.cc.o"
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/detect.dir/main.cc.o -MF CMakeFiles/detect.dir/main.cc.o.d -o CMakeFiles/detect.dir/main.cc.o -c /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/main.cc
 
 src/CMakeFiles/detect.dir/main.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/detect.dir/main.cc.i"
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuariocp/practica4_IC/source_p4/detect/src/main.cc > CMakeFiles/detect.dir/main.cc.i
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/main.cc > CMakeFiles/detect.dir/main.cc.i
 
 src/CMakeFiles/detect.dir/main.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/detect.dir/main.cc.s"
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuariocp/practica4_IC/source_p4/detect/src/main.cc -o CMakeFiles/detect.dir/main.cc.s
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/main.cc -o CMakeFiles/detect.dir/main.cc.s
 
 # Object files for target detect
 detect_OBJECTS = \
@@ -93,25 +93,25 @@ detect_EXTERNAL_OBJECTS =
 detect: src/CMakeFiles/detect.dir/main.cc.o
 detect: src/CMakeFiles/detect.dir/build.make
 detect: /usr/lib/x86_64-linux-gnu/libpng.so
-detect: /home/usuariocp/practica4_IC/source_p4/detect/src/libjpeg/build/libjpeg.a
+detect: /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/build/libjpeg.a
 detect: src/utils/libutils.a
-detect: /opt/mpich-4.2.1/lib/libmpi.so
+detect: /usr/lib/x86_64-linux-gnu/openmpi/lib/libmpi.so
 detect: /usr/lib/x86_64-linux-gnu/libpng.so
 detect: /usr/lib/x86_64-linux-gnu/libz.so
-detect: /home/usuariocp/practica4_IC/source_p4/detect/src/libjpeg/build/libjpeg.a
+detect: /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/build/libjpeg.a
 detect: src/CMakeFiles/detect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../detect"
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/detect.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../detect"
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/detect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/detect.dir/build: detect
 .PHONY : src/CMakeFiles/detect.dir/build
 
 src/CMakeFiles/detect.dir/clean:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src && $(CMAKE_COMMAND) -P CMakeFiles/detect.dir/cmake_clean.cmake
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src && $(CMAKE_COMMAND) -P CMakeFiles/detect.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/detect.dir/clean
 
 src/CMakeFiles/detect.dir/depend:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuariocp/practica4_IC/source_p4/detect /home/usuariocp/practica4_IC/source_p4/detect/src /home/usuariocp/practica4_IC/source_p4/detect/build /home/usuariocp/practica4_IC/source_p4/detect/build/src /home/usuariocp/practica4_IC/source_p4/detect/build/src/CMakeFiles/detect.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src/CMakeFiles/detect.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/detect.dir/depend
 

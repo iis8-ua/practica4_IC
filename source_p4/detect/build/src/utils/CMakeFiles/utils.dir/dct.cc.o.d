@@ -1,8 +1,8 @@
 src/utils/CMakeFiles/utils.dir/dct.cc.o: \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.cc \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/dct.cc \
  /usr/include/stdc-predef.h \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.h \
- /home/alumno/practica4_IC/source_p4/detect/src/utils/image.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/dct.h \
+ /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils/image.h \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

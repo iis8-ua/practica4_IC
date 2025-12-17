@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/usuariocp/practica4_IC/source_p4/detect
+CMAKE_SOURCE_DIR = /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/usuariocp/practica4_IC/source_p4/detect/build
+CMAKE_BINARY_DIR = /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles /home/usuariocp/practica4_IC/source_p4/detect/build/src//CMakeFiles/progress.marks
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles 0
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/src//CMakeFiles/progress.marks
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/detect.dir/rule:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/detect.dir/rule
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/detect.dir/rule
 .PHONY : src/CMakeFiles/detect.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ detect: src/CMakeFiles/detect.dir/rule
 
 # fast build rule for target.
 detect/fast:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/build
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/build
 .PHONY : detect/fast
 
 main.o: main.cc.o
@@ -135,7 +135,7 @@ main.o: main.cc.o
 
 # target to build an object file
 main.cc.o:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/main.cc.o
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/main.cc.o
 .PHONY : main.cc.o
 
 main.i: main.cc.i
@@ -143,7 +143,7 @@ main.i: main.cc.i
 
 # target to preprocess a source file
 main.cc.i:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/main.cc.i
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/main.cc.i
 .PHONY : main.cc.i
 
 main.s: main.cc.s
@@ -151,7 +151,7 @@ main.s: main.cc.s
 
 # target to generate assembly for a file
 main.cc.s:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/main.cc.s
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/detect.dir/build.make src/CMakeFiles/detect.dir/main.cc.s
 .PHONY : main.cc.s
 
 # Help Target
@@ -177,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/usuariocp/practica4_IC/source_p4/detect/src/utils
+# Install script for directory: /home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/utils
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

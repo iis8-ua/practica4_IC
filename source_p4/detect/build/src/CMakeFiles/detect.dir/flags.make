@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/usuariocp/practica4_IC/source_p4/detect/src -I/home/usuariocp/practica4_IC/source_p4/detect/src/libjpeg/build -I/home/usuariocp/practica4_IC/source_p4/detect/src/libjpeg -isystem /opt/mpich-4.2.1/include
+CXX_INCLUDES = -I/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src -I/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg/build -I/home/israelizqdo/Escritorio/3Carrera/IC/Practica4/source_p4/detect/src/libjpeg -isystem /usr/lib/x86_64-linux-gnu/openmpi/include -isystem /usr/lib/x86_64-linux-gnu/openmpi/include/openmpi
 
 CXX_FLAGS =  -fopenmp -std=gnu++17
 
