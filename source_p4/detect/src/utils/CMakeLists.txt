@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.15)
+include_directories(${PNG_INCLUDE_DIR})
+include_directories(${PROJECT_SOURCE_DIR}/libjpeg/build)
+include_directories(${PROJECT_SOURCE_DIR}/libjpeg)
+add_library(utils image.h image.cc dct.h dct.cc)
+target_link_libraries(utils PNG::PNG ${PROJECT_SOURCE_DIR}/libjpeg/build/libjpeg.a)

@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG CMakeFiles/jcstest.dir/__/jcstest.c.o -o ../jcstest  -Wl,-rpath,/home/alumno/Descargas/libjpeg/build ../libjpeg.so.62.4.0 
