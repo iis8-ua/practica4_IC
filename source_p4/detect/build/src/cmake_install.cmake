@@ -1,4 +1,4 @@
-# Install script for directory: /home/alumno/practica4_IC/source_p4/detect/src
+# Install script for directory: /home/usuariocp/practica4_IC/source_p4/detect/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,6 +44,6 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/alumno/practica4_IC/source_p4/detect/build/src/utils/cmake_install.cmake")
+  include("/home/usuariocp/practica4_IC/source_p4/detect/build/src/utils/cmake_install.cmake")
 endif()
 

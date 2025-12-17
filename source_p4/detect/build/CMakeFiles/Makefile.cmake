@@ -7,12 +7,12 @@ set(CMAKE_DEPENDS_GENERATOR "Unix Makefiles")
 # The top level Makefile was generated from the following files:
 set(CMAKE_MAKEFILE_DEPENDS
   "CMakeCache.txt"
-  "/home/alumno/practica4_IC/source_p4/detect/CMakeLists.txt"
+  "/home/usuariocp/practica4_IC/source_p4/detect/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
-  "/home/alumno/practica4_IC/source_p4/detect/src/CMakeLists.txt"
-  "/home/alumno/practica4_IC/source_p4/detect/src/utils/CMakeLists.txt"
+  "/home/usuariocp/practica4_IC/source_p4/detect/src/CMakeLists.txt"
+  "/home/usuariocp/practica4_IC/source_p4/detect/src/utils/CMakeLists.txt"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"

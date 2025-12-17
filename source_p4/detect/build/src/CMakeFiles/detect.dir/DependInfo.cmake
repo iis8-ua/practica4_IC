@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/alumno/practica4_IC/source_p4/detect/src/main.cc" "src/CMakeFiles/detect.dir/main.cc.o" "gcc" "src/CMakeFiles/detect.dir/main.cc.o.d"
+  "/home/usuariocp/practica4_IC/source_p4/detect/src/main.cc" "src/CMakeFiles/detect.dir/main.cc.o" "gcc" "src/CMakeFiles/detect.dir/main.cc.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

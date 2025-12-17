@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alumno/practica4_IC/source_p4/detect
+CMAKE_SOURCE_DIR = /home/usuariocp/practica4_IC/source_p4/detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alumno/practica4_IC/source_p4/detect/build
+CMAKE_BINARY_DIR = /home/usuariocp/practica4_IC/source_p4/detect/build
 
 # Include any dependencies generated for this target.
 include src/utils/CMakeFiles/utils.dir/depend.make
@@ -70,32 +70,32 @@ include src/utils/CMakeFiles/utils.dir/progress.make
 include src/utils/CMakeFiles/utils.dir/flags.make
 
 src/utils/CMakeFiles/utils.dir/image.cc.o: src/utils/CMakeFiles/utils.dir/flags.make
-src/utils/CMakeFiles/utils.dir/image.cc.o: /home/alumno/practica4_IC/source_p4/detect/src/utils/image.cc
+src/utils/CMakeFiles/utils.dir/image.cc.o: /home/usuariocp/practica4_IC/source_p4/detect/src/utils/image.cc
 src/utils/CMakeFiles/utils.dir/image.cc.o: src/utils/CMakeFiles/utils.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/utils/CMakeFiles/utils.dir/image.cc.o"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/utils/CMakeFiles/utils.dir/image.cc.o -MF CMakeFiles/utils.dir/image.cc.o.d -o CMakeFiles/utils.dir/image.cc.o -c /home/alumno/practica4_IC/source_p4/detect/src/utils/image.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/utils/CMakeFiles/utils.dir/image.cc.o"
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/utils/CMakeFiles/utils.dir/image.cc.o -MF CMakeFiles/utils.dir/image.cc.o.d -o CMakeFiles/utils.dir/image.cc.o -c /home/usuariocp/practica4_IC/source_p4/detect/src/utils/image.cc
 
 src/utils/CMakeFiles/utils.dir/image.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/utils.dir/image.cc.i"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alumno/practica4_IC/source_p4/detect/src/utils/image.cc > CMakeFiles/utils.dir/image.cc.i
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuariocp/practica4_IC/source_p4/detect/src/utils/image.cc > CMakeFiles/utils.dir/image.cc.i
 
 src/utils/CMakeFiles/utils.dir/image.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/utils.dir/image.cc.s"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alumno/practica4_IC/source_p4/detect/src/utils/image.cc -o CMakeFiles/utils.dir/image.cc.s
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuariocp/practica4_IC/source_p4/detect/src/utils/image.cc -o CMakeFiles/utils.dir/image.cc.s
 
 src/utils/CMakeFiles/utils.dir/dct.cc.o: src/utils/CMakeFiles/utils.dir/flags.make
-src/utils/CMakeFiles/utils.dir/dct.cc.o: /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.cc
+src/utils/CMakeFiles/utils.dir/dct.cc.o: /home/usuariocp/practica4_IC/source_p4/detect/src/utils/dct.cc
 src/utils/CMakeFiles/utils.dir/dct.cc.o: src/utils/CMakeFiles/utils.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/utils/CMakeFiles/utils.dir/dct.cc.o"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/utils/CMakeFiles/utils.dir/dct.cc.o -MF CMakeFiles/utils.dir/dct.cc.o.d -o CMakeFiles/utils.dir/dct.cc.o -c /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/utils/CMakeFiles/utils.dir/dct.cc.o"
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/utils/CMakeFiles/utils.dir/dct.cc.o -MF CMakeFiles/utils.dir/dct.cc.o.d -o CMakeFiles/utils.dir/dct.cc.o -c /home/usuariocp/practica4_IC/source_p4/detect/src/utils/dct.cc
 
 src/utils/CMakeFiles/utils.dir/dct.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/utils.dir/dct.cc.i"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.cc > CMakeFiles/utils.dir/dct.cc.i
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/usuariocp/practica4_IC/source_p4/detect/src/utils/dct.cc > CMakeFiles/utils.dir/dct.cc.i
 
 src/utils/CMakeFiles/utils.dir/dct.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/utils.dir/dct.cc.s"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alumno/practica4_IC/source_p4/detect/src/utils/dct.cc -o CMakeFiles/utils.dir/dct.cc.s
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/usuariocp/practica4_IC/source_p4/detect/src/utils/dct.cc -o CMakeFiles/utils.dir/dct.cc.s
 
 # Object files for target utils
 utils_OBJECTS = \
@@ -109,19 +109,19 @@ src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/image.cc.o
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/dct.cc.o
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/build.make
 src/utils/libutils.a: src/utils/CMakeFiles/utils.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libutils.a"
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean_target.cmake
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utils.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libutils.a"
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean_target.cmake
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/utils.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/utils/CMakeFiles/utils.dir/build: src/utils/libutils.a
 .PHONY : src/utils/CMakeFiles/utils.dir/build
 
 src/utils/CMakeFiles/utils.dir/clean:
-	cd /home/alumno/practica4_IC/source_p4/detect/build/src/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean.cmake
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils && $(CMAKE_COMMAND) -P CMakeFiles/utils.dir/cmake_clean.cmake
 .PHONY : src/utils/CMakeFiles/utils.dir/clean
 
 src/utils/CMakeFiles/utils.dir/depend:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alumno/practica4_IC/source_p4/detect /home/alumno/practica4_IC/source_p4/detect/src/utils /home/alumno/practica4_IC/source_p4/detect/build /home/alumno/practica4_IC/source_p4/detect/build/src/utils /home/alumno/practica4_IC/source_p4/detect/build/src/utils/CMakeFiles/utils.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/usuariocp/practica4_IC/source_p4/detect /home/usuariocp/practica4_IC/source_p4/detect/src/utils /home/usuariocp/practica4_IC/source_p4/detect/build /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils/CMakeFiles/utils.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/utils/CMakeFiles/utils.dir/depend
 

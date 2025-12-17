@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alumno/practica4_IC/source_p4/detect
+CMAKE_SOURCE_DIR = /home/usuariocp/practica4_IC/source_p4/detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alumno/practica4_IC/source_p4/detect/build
+CMAKE_BINARY_DIR = /home/usuariocp/practica4_IC/source_p4/detect/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles /home/alumno/practica4_IC/source_p4/detect/build/src/utils//CMakeFiles/progress.marks
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alumno/practica4_IC/source_p4/detect/build/CMakeFiles 0
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles /home/usuariocp/practica4_IC/source_p4/detect/build/src/utils//CMakeFiles/progress.marks
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/usuariocp/practica4_IC/source_p4/detect/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/clean
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,22 +103,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/preinstall
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/preinstall
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/utils/CMakeFiles/utils.dir/rule:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/utils.dir/rule
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/utils/CMakeFiles/utils.dir/rule
 .PHONY : src/utils/CMakeFiles/utils.dir/rule
 
 # Convenience name for target.
@@ -127,7 +127,7 @@ utils: src/utils/CMakeFiles/utils.dir/rule
 
 # fast build rule for target.
 utils/fast:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/build
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/build
 .PHONY : utils/fast
 
 dct.o: dct.cc.o
@@ -135,7 +135,7 @@ dct.o: dct.cc.o
 
 # target to build an object file
 dct.cc.o:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/dct.cc.o
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/dct.cc.o
 .PHONY : dct.cc.o
 
 dct.i: dct.cc.i
@@ -143,7 +143,7 @@ dct.i: dct.cc.i
 
 # target to preprocess a source file
 dct.cc.i:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/dct.cc.i
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/dct.cc.i
 .PHONY : dct.cc.i
 
 dct.s: dct.cc.s
@@ -151,7 +151,7 @@ dct.s: dct.cc.s
 
 # target to generate assembly for a file
 dct.cc.s:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/dct.cc.s
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/dct.cc.s
 .PHONY : dct.cc.s
 
 image.o: image.cc.o
@@ -159,7 +159,7 @@ image.o: image.cc.o
 
 # target to build an object file
 image.cc.o:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/image.cc.o
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/image.cc.o
 .PHONY : image.cc.o
 
 image.i: image.cc.i
@@ -167,7 +167,7 @@ image.i: image.cc.i
 
 # target to preprocess a source file
 image.cc.i:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/image.cc.i
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/image.cc.i
 .PHONY : image.cc.i
 
 image.s: image.cc.s
@@ -175,7 +175,7 @@ image.s: image.cc.s
 
 # target to generate assembly for a file
 image.cc.s:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/image.cc.s
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(MAKE) $(MAKESILENT) -f src/utils/CMakeFiles/utils.dir/build.make src/utils/CMakeFiles/utils.dir/image.cc.s
 .PHONY : image.cc.s
 
 # Help Target
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alumno/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/usuariocp/practica4_IC/source_p4/detect/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
